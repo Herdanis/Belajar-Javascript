@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Data Array</title>
+</head>
+
+<body>
+    <script>
+        let arrrayKosong = []
+
+        arrrayKosong = ['qwe', 'asd', 'zxc']
+        console.info(arrrayKosong)
+
+        const name = []
+
+        // use push to add data in array
+        name.push('poi')
+        name.push('lkj', '123', 987)
+
+        console.table(name)
+
+        // change data array with index 2
+        name[2] = 'asd'
+        console.table(name)
+
+        // delete the data in array
+        delete name[3]
+        console.table(name)
+
+        // add array in array
+        name.push(['fgh', 'ytr', 'bvn'])
+        console.table(name)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Data Object</title>
+</head>
+
+<body>
+    <script>
+        let objectKosong = {}
+
+        // add object 
+        objectKosong['name'] = 'qwe'
+        objectKosong['address'] = '123'
+
+        console.table(objectKosong)
+
+        // delete object
+        delete objectKosong['address']
+        console.table(objectKosong)
+
+        // initial set object
+        const person = {
+            'name': 'qwe',
+            'address': 'asd',
+            'age': '123',
+            'other name': 'lkjhgf'
+        }
+
+        console.table(person)
+
+        // get information from object
+        console.info(`name : ${person.name}`)
+        console.info(`other name : ${person['other name']}`) // use [] to get value with space separator in key
+    </script>
+</body>
+
+</html>
