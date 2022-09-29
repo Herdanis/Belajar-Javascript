@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+    <script>
+
+        {
+            const name = ['qwe', 'asd', 'zxc', 'rfv', 'wsx']
+
+            const [firstname, middlename, lastName, ...others] = name;
+
+            console.info(lastName)
+            console.info(others)
+        }
+
+        {
+            const person = {
+                name: 'tes',
+                lastname: 'asd',
+                age: 123,
+                address: {
+                    city: 'jakarta',
+                    country: 'indonesia',
+                }
+            }
+
+            /*
+            let { name, lastname, age, ...other } = person
+            console.info(person.lastname)
+            */
+
+            let { name, lastname, age, address: { country }, ...other } = person
+            console.info(country)
+        }
+        {
+            function dispalayPerson({ firstname, middlename, lastName }) {
+                console.info(firstname)
+                console.info(middlename)
+                console.info(lastName)
+            }
+
+            const person = {
+                firstname: 'tes',
+                middlename: 'qwe',
+                lastName: 'asd'
+            }
+
+            dispalayPerson(person)
+        }
+
+        {
+            function sum([first, second]) {
+                return first + second
+            }
+
+            console.info(sum([10, 1]))
+        }
+
+        {
+            const name = ['qwe', 'asd', 123]
+
+            const [firstname, middlename, lastName = 'lkj'] = name;
+
+            console.info(firstname)
+            console.info(lastName)
+        }
+
+        {
+            const person = {
+                firstname: 'tes',
+                lastname: 'asd',
+                age: 123,
+                address: {
+                    city: 'jakarta',
+                    country: 'indonesia',
+                }
+            }
+
+            const { firstname, middlename = 'iverv', lastName = 'lkj' } = person;
+
+            console.info(middlename)
+            console.info(lastName)
+        }
+
+        {
+            const person = {
+                firstname: 'tes',
+                lastname: 'asd',
+                age: 123,
+                address: {
+                    city: 'jakarta',
+                    country: 'indonesia',
+                }
+            }
+
+            const { firstname: first,
+                middlename: mid = 'iverv',
+                lastName: last = 'lkj' } = person;
+
+            console.info(mid)
+            console.info(last)
+        }
+
+    </script>
+
+</body>
+
+</html>

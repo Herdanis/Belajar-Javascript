@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter Setter</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            firstName: 'tes',
+            lastname: 'qwe',
+            get fullname() {
+                return `${this.firstName} ${this.lastname}`
+            },
+            set fullname(val) {
+                const array = val.split(' ')
+                this.firstName = array[0]
+                this.lastname = array[1]
+            }
+        }
+
+        console.info(person.fullname)
+
+        person.fullname = 'asd zxc'
+        console.info(person.fullname)
+
+
+    </script>
+</body>
+
+</html>
